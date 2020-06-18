@@ -48,6 +48,8 @@ SIDEBAR_LANGUAGES = [
 
 # EXTRA FEATURES
 BROWSER_COLOR = ''
+GOOGLE_ANALYTICS = ''
+SHOW_FOOTER = True
 ```
 
 ### Customization
