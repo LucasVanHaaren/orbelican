@@ -37,6 +37,14 @@ SIDEBAR_GOODREADS = ''
 SIDEBAR_DRIVINGLICENSE = ''
 SIDEBAR_ADDRESS = ''
 
+SIDEBAR_LANGUAGES_LABEL = ''
+SIDEBAR_LANGUAGES = [
+    {
+        'idiom': '',
+        'level': ''
+    }
+]
+
 
 # EXTRA FEATURES
 BROWSER_COLOR = ''
