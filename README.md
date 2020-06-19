@@ -22,6 +22,15 @@ PROFILE_NAME = ''
 PROFILE_PICTURE = ''
 PROFILE_SUMMARY_LABEL = ''
 PROFILE_SUMMARY = ''
+PROFILE_EDUCATIONS_LABEL = ''
+PROFILE_EDUCATIONS = [
+    {
+        'degree': '',
+        'time': '',
+        'university': '',
+        'details': '',
+    }
+]
 
 # SIDEBAR
 SIDEBAR_EMAIL = ''
