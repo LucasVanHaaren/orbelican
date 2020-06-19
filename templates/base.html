@@ -9,8 +9,9 @@
                 {% endblock %}
             </div>
         </div>
+        {% if SHOW_FOOTER %}
         {% include 'includes/footer.html' %}
+        {% endif %}
         {% include 'includes/scripts.html' %}
-        {% include 'includes/analytics.html'%}
     </body>
 </html>
