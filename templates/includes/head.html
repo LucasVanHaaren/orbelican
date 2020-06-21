@@ -1,0 +1,33 @@
+<head>
+    <!-- SITE CONFIGURATION -->
+    <title>{{ SITENAME }}</title>
+    <meta charset="utf-8">
+    <meta name="description" content="{{ SITEDESCRIPTION }}">
+    <meta name="robots" content="{{ SITEROBOTS }}">
+
+    {% if SITEFAVICON %}
+    <link rel="shortcut icon" href="{{ SITEURL }}/images/{{ SITEFAVICON }}">
+    <link rel="icon" href="{{ SITEURL }}/images/{{ SITEFAVICON }}">
+    {% else %}
+    <link rel="shortcut icon" href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/favicon.ico">
+    <link rel="icon" href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/favicon.ico">
+    {% endif %}
+
+    <!-- STYLE CONFIGURATION -->
+    <link rel="stylesheet" href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/css/fontawesome.min.css">
+
+    {% if THEME_COLOR %}
+    <link id="theme-style" rel="stylesheet" href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/css/main-{{ THEME_COLOR }}.css">
+    {% else %}
+    <link id="theme-style" rel="stylesheet" href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/css/main-blue.css">
+    {% endif %}
+
+    {% if BROWSER_COLOR %}
+    <meta name="theme-color" content="{{ BROWSER_COLOR }}">
+    {% endif %}
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
