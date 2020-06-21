@@ -31,6 +31,24 @@ PROFILE_EDUCATIONS = [
         'details': '',
     }
 ]
+PROFILE_EXPERIENCES_LABEL = ''
+PROFILE_EXPERIENCES = [
+    {
+        'title': '',
+        'time': '',
+        'company': '',
+        'details': ''
+    }
+]
+PROFILE_PROJECTS_LABEL = ''
+PROFILE_PROJECTS_INTRO = ''
+PROFILE_PROJECTS = [
+    {
+        'title': '',
+        'link': '',
+        'tagline': ''
+    }
+]
 
 # SIDEBAR
 SIDEBAR_EMAIL = ''
