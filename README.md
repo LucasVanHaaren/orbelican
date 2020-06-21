@@ -49,6 +49,13 @@ PROFILE_PROJECTS = [
         'tagline': ''
     }
 ]
+PROFILE_SKILLS_LABEL = ''
+PROFILE_SKILLS = [
+    {
+        'name': '',
+        'level': '',
+    }
+]
 
 # SIDEBAR
 SIDEBAR_EMAIL = ''
