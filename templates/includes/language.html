@@ -1,0 +1,22 @@
+{% if SIDEBAR_LANGUAGES %}
+<div class="languages-container container-block">
+    <h2 class="container-block-title">
+        {% if SIDEBAR_LANGUAGES_LABEL %}
+        {{ SIDEBAR_LANGUAGES_LABEL }}
+        {% else %}
+        Languages
+        {% endif %}
+    </h2>
+    <ul class="list-unstyled interests-list">
+        {% for language in SIDEBAR_LANGUAGES %}
+        <li>
+            {{ language['idiom'] }}
+            {% if language['level'] %}
+            <span class="lang-desc">({{ language['level'] }})</span>
+            {% endif %}
+        </li>
+        {% endfor %}
+    </ul>
+
+</div>
+{% endif %}

@@ -1,0 +1,73 @@
+{% if SIDEBAR_EMAIL %}
+<li class="email"><i class="fas fa-envelope"></i>
+    <a href="mailto:{{ SIDEBAR_EMAIL }}">{{ SIDEBAR_EMAIL }}</a>
+</li>
+{% endif %}
+
+{% if SIDEBAR_PHONE %}
+<li class="phone"><i class="fas fa-phone"></i>
+    <a href="tel:{{ SIDEBAR_PHONE }}">{{ SIDEBAR_PHONE }}</a>
+</li>
+{% endif %}
+
+{% if SIDEBAR_TELEGRAM %}
+<li class="telegram"><i class="fab fa-telegram"></i>
+    <a href="https://t.me/{{ SIDEBAR_TELEGRAM }}" target="_blank">{{ SIDEBAR_TELEGRAM }}</a>
+</li>
+{% endif %}
+
+{% if SIDEBAR_WEBSITE %}
+<li class="website"><i class="fas fa-globe-americas"></i>
+    <a href="https://{{ SIDEBAR_WEBSITE }}" target="_blank">{{ SIDEBAR_WEBSITE }}</a>
+</li>
+{% endif %}
+
+{% if SIDEBAR_LINKEDIN %}
+<li class="linkedin"><i class="fab fa-linkedin"></i>
+    <a href="https://linkedin.com/in/{{ SIDEBAR_LINKEDIN }}" target="_blank">{{ SIDEBAR_LINKEDIN }}</a>
+</li>
+{% endif %}
+
+{% if SIDEBAR_GITHUB %}
+<li class="github"><i class="fab fa-github"></i>
+    <a href="https://github.com/{{ SIDEBAR_GITHUB }}" target="_blank">{{ SIDEBAR_GITHUB }}</a>
+</li>
+{% endif %}
+
+{% if SIDEBAR_GITLAB %}
+<li class="gitlab"><i class="fab fa-gitlab"></i>
+    <a href="https://gitlab.com/{{ SIDEBAR_GITLAB }}" target="_blank">{{ SIDEBAR_GITLAB }}</a>
+</li>
+{% endif %}
+
+{% if SIDEBAR_BITBUCKET %}
+<li class="bitbucket"><i class="fab fa-bitbucket"></i>
+    <a href="https://bitbucket.com/{{ SIDEBAR_BITBUCKET }}" target="_blank">{{ SIDEBAR_BITBUCKET }}</a>
+</li>
+{% endif %}
+
+{% if SIDEBAR_TWITTER %}
+<li class="twitter"><i class="fab fa-twitter"></i>
+    <a href="https://twitter.com/{{ SIDEBAR_TWITTER }}" target="_blank">{{ SIDEBAR_TWITTER }}</a>
+</li>
+{% endif %}
+
+{% if SIDEBAR_STACKOVERFLOW %}
+<li class="stack-overflow"><i class="fab fa-stack-overflow"></i>
+    <a href="https://stackoverflow.com/users/{{ SIDEBAR_STACKOVERFLOW }}"
+        target="_blank">{{ SIDEBAR_STACKOVERFLOW }}</a>
+</li>
+{% endif %}
+
+{% if SIDEBAR_CODEWARS %}
+<li class="codewars"><i class="fas fa-code"></i>
+    <a href="https://www.codewars.com/users/{{ SIDEBAR_CODEWARS }}/completed_solutions"
+        target="_blank">{{ SIDEBAR_CODEWARS }}</a>
+</li>
+{% endif %}
+
+{% if SIDEBAR_GOODREADS %}
+<li class="goodreads-g"><i class="fab fa-goodreads-g"></i>
+    <a href="https://www.goodreads.com/user/show/{{ SIDEBAR_GOODREADS }}" target="_blank">{{ SIDEBAR_GOODREADS }}</a>
+</li>
+{% endif %}

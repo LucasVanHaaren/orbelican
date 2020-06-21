@@ -1,0 +1,17 @@
+<div class="contact-container container-block">
+    <ul class="list-unstyled contact-list">
+        {% include 'includes/contact.html'%}
+
+        {% if SIDEBAR_DRIVINGLICENSE %}
+        <li class="driving-license"><i class="fas fa-car"></i>
+            {{ SIDEBAR_DRIVINGLICENSE }}
+        </li>
+        {% endif %}
+
+        {% if SIDEBAR_ADDRESS %}
+        <li class="address"><i class="fas fa-home"></i>
+            {{ SIDEBAR_ADDRESS }}
+        </li>
+        {% endif %}
+    </ul>
+</div>
