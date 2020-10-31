@@ -6,6 +6,12 @@ A simple port of **orbit-theme** for **Pelican** to build your online resume
 
 ## Getting started
 
+To build css files from sass, run:
+
+```bash
+python setup.py build_sass
+```
+
 ```python
 THEME = 'orbelican'
 THEME_COLOR = 'blue' # ['blue','green','red','purple','grey']
