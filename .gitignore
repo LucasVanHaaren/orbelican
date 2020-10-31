@@ -1,0 +1,4 @@
+.sass-cache/
+static/css/
+.env/
+.eggs/
