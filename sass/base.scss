@@ -232,11 +232,17 @@ p {
     .level-title {
         font-size: 14px;
         margin-top: 0;
-        margin-bottom: 12px;
+        display: inline-block;
+        width: 30%;
+        margin-bottom: 0;
     }
     .level-bar {
         height: 12px;
         background: $smoky-white;
+        display: inline-block;
+        width: 70%;
+        position: relative;
+        top: 1px;
     }
     .level-bar-inner {
         height: 12px;
