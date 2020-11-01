@@ -1,9 +1,9 @@
 <div class="sidebar-wrapper">
-    <div class="profile-wrapper">
+    <div class="profile-container">
         {% if PROFILE_PICTURE %}
-        <img class="profile-img" src="{{ SITEURL }}/images/{{ PROFILE_PICTURE }}" />
+        <img class="profile" src="{{ SITEURL }}/images/{{ PROFILE_PICTURE }}" />
         {% else %}
-        <img class="profile-img" src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/images/profile.png" />
+        <img class="profile" src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/images/profile.png" />
         {% endif %}
 
         {% if PROFILE_NAME %}
