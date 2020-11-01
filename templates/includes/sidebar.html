@@ -6,10 +6,12 @@
         <img class="profile" src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/images/profile.png" />
         {% endif %}
 
-        {% if PROFILE_NAME %}
-        <h1 class="name">{{ PROFILE_NAME }}</h1>
+        {% if PROFILE_FIRSTNAME and PROFILE_LASTNAME %}
+        <h1 class="name">{{ PROFILE_FIRSTNAME }}</h1>
+        <h1 class="name">{{ PROFILE_LASTNAME }}</h1>
         {% else %}
-        <h1 class="name">Alan Doe</h1>
+        <h1 class="name">Alan</h1>
+        <h1 class="name">Doe</h1>
         {% endif %}
 
         {% if PROFILE_TAGLINE %}
