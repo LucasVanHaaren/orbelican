@@ -237,10 +237,10 @@ p {
     .level-bar {
         height: 12px;
         background: $smoky-white;
-        @include border-radius(2px);
     }
-    .theme-progress-bar {
-	    background: lighten($theme-color, 10%);
+    .level-bar-inner {
+        height: 12px;
+        background: lighten($theme-color, 15%);
     }
 }
 
