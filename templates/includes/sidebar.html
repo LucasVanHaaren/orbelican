@@ -19,6 +19,12 @@
         {% else %}
         <h3 class="tagline">Web Developer</h3>
         {% endif %}
+
+        {% if PROFILE_AGE %}
+        <h3 class="age">{{ PROFILE_AGE }}</h3>
+        {% else %}
+        <h3 class="age">24 yo</h3>
+        {% endif %}
     </div>
     {% include 'includes/infos.html' %}
     {% include 'includes/language.html' %}
