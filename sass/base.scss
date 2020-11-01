@@ -13,7 +13,6 @@ h1, h2, h3, h4, h5, h6  {
 
 a {
     color: darken($theme-color, 15%);
-
     &:hover {
         text-decoration: underline;
         color: darken($theme-color, 30%);
@@ -128,7 +127,6 @@ p {
             color: rgba(256, 256, 256, 0.6);
         }
     }
-    
     .languages-list {
         margin-bottom: 0;
         li {
@@ -138,7 +136,6 @@ p {
             }
         }
     }
-    
     .interests-list {
         margin-bottom: 0;
         li {
@@ -184,8 +181,7 @@ p {
     .section {
         margin-bottom: 60px;
     }
-    
-    .experiences-section {
+    .experiences-section, .educations-section {
         .item {
             margin-bottom: 30px;
         }
@@ -195,7 +191,7 @@ p {
         overflow: hidden;
         margin-bottom: 2px;
     }
-    .job-title {
+    .job-title, .degree {
         color: $text-color;
         font-size: 16px;
         margin-top: 0;
@@ -208,11 +204,10 @@ p {
         top: 0;
         color: $text-grey;
     }
-    .company {
+    .company, .university {
         margin-bottom: 10px;
         color: $text-grey;
-    }
-    
+    } 
     .project-title {
         font-size: 16px;
         font-weight: 400;
@@ -227,9 +222,7 @@ p {
             margin-bottom: 15px;
         }
     }
-    
 }
-
 
 .skillset {
     .item {
@@ -241,33 +234,24 @@ p {
         margin-top: 0;
         margin-bottom: 12px;
     }
-    
-    
     .level-bar {
         height: 12px;
         background: $smoky-white;
         @include border-radius(2px);
     }
-    
     .theme-progress-bar {
 	    background: lighten($theme-color, 10%);
     }
 }
 
-
-
-
 .footer {
     padding: 30px;
-    padding-top: 60px;
     .copyright {
         line-height: 1.6;
         color: $text-color-secondary;
         font-size: 13px;       
     }  
-    
     .fa-heart {
         color: $heart;
     }
-    
 }
