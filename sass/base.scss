@@ -64,6 +64,11 @@ p {
         color: rgba(256, 256, 256, 0.6);
         font-size: 16px;
         font-weight: 400;
+    }
+    .age {
+        color: rgba(255,255,255,0.8);
+        font-size: 16px;
+        font-weight: 400;
         margin-top: 0;
         margin-bottom: 0;
     }
@@ -75,7 +80,7 @@ p {
         box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
     }
     .contact-list {
-        .svg-inline--fa  {
+        .fas, .fab  {
             margin-right: 5px;
             font-size: 18px;
             vertical-align: middle;
