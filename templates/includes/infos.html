@@ -1,17 +1,26 @@
 <div class="contact-container container-block">
     <ul class="list-unstyled contact-list">
-        {% include 'includes/contact.html'%}
-
-        {% if SIDEBAR_DRIVINGLICENSE %}
-        <li class="driving-license"><i class="fas fa-car"></i>
-            {{ SIDEBAR_DRIVINGLICENSE }}
+        {% if SIDEBAR_EMAIL %}
+        <li class="email"><i class="fas fa-envelope"></i>
+            <a href="mailto:{{ SIDEBAR_EMAIL }}">{{ SIDEBAR_EMAIL }}</a>
         </li>
         {% endif %}
-
+        {% if SIDEBAR_PHONE %}
+        <li class="phone"><i class="fas fa-phone"></i>
+            <a href="tel:{{ SIDEBAR_PHONE }}">{{ SIDEBAR_PHONE }}</a>
+        </li>
+        {% endif %}
         {% if SIDEBAR_ADDRESS %}
         <li class="address"><i class="fas fa-home"></i>
             {{ SIDEBAR_ADDRESS }}
         </li>
         {% endif %}
+        {% if SIDEBAR_DRIVINGLICENSE %}
+        <li class="driving-license"><i class="fas fa-car"></i>
+            {{ SIDEBAR_DRIVINGLICENSE }}
+        </li>
+        {% endif %}
+        <hr>
+        {% include 'includes/contact.html'%}
     </ul>
 </div>
