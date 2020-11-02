@@ -101,3 +101,15 @@ SHOW_FOOTER = True
 #### Add a profile picture
 
 Copy your best profile picture in your site project in `images` folder and set `PROFILE_PICTURE = '<FILENAME>'`. Do the same for customize your favicon.
+
+## License
+
+>This Bootstrap template [...] is 100% FREE as long as you keep the footer attribution link.
+
+This is a port of [**orbit-theme**](https://github.com/xriley/Orbit-Theme) for Pelican, it can be used for free if you keep the footer attribution link.
+
+>If you'd like to use the template without the attribution link, you can [buy the commercial license](https://themes.3rdwavemedia.com/bootstrap-templates/resume/orbit-free-resume-cv-bootstrap-theme-for-developers/) via the theme website
+
+If you have paid for the license you can hide the footer by setting the configuration variable `SHOW_FOOTER = True` in your `pelicanconf.py`
+
+The above quotes come from the [original theme](https://github.com/xriley/Orbit-Theme#author--license) github repository.
