@@ -3,6 +3,7 @@ body {
     color: $text-color-secondary;
     background: $smoky-white;
     font-size: 14px;
+    line-height: 1.4;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
@@ -13,7 +14,6 @@ h1, h2, h3, h4, h5, h6  {
 
 a {
     color: darken($theme-color, 15%);
-
     &:hover {
         text-decoration: underline;
         color: darken($theme-color, 30%);
@@ -30,7 +30,7 @@ p {
 
 .wrapper {
     background:$theme-color;
-    max-width: 960px;
+    max-width: 1000px;
     margin: 0 auto;
     margin-top: 30px;
     position: relative;
@@ -41,7 +41,7 @@ p {
     background: $theme-color;
     position: absolute;
     right: 0;
-    width: 240px;
+    width: 280px;
     height: 100%;
     min-height: 800px;
     color: #fff;
@@ -64,14 +64,23 @@ p {
         color: rgba(256, 256, 256, 0.6);
         font-size: 16px;
         font-weight: 400;
+    }
+    .age {
+        color: rgba(255,255,255,0.8);
+        font-size: 16px;
+        font-weight: 400;
         margin-top: 0;
         margin-bottom: 0;
     }
     .profile {
-        margin-bottom: 15px;
+        max-width: 100px;	
+        margin-bottom: 15px;	
+        border: 0px solid #fff;	
+        border-radius: 100%;	
+        box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
     }
     .contact-list {
-        .svg-inline--fa  {
+        .fas, .fab  {
             margin-right: 5px;
             font-size: 18px;
             vertical-align: middle;
@@ -81,6 +90,10 @@ p {
             &:last-child {
                 margin-bottom: 0;
             }
+        }
+        hr{
+            border-color: white;
+            opacity: 0.5;
         }
         .email {
             .svg-inline--fa  {
@@ -128,7 +141,6 @@ p {
             color: rgba(256, 256, 256, 0.6);
         }
     }
-    
     .languages-list {
         margin-bottom: 0;
         li {
@@ -138,7 +150,6 @@ p {
             }
         }
     }
-    
     .interests-list {
         margin-bottom: 0;
         li {
@@ -184,8 +195,7 @@ p {
     .section {
         margin-bottom: 60px;
     }
-    
-    .experiences-section {
+    .experiences-section, .educations-section {
         .item {
             margin-bottom: 30px;
         }
@@ -195,7 +205,7 @@ p {
         overflow: hidden;
         margin-bottom: 2px;
     }
-    .job-title {
+    .job-title, .degree {
         color: $text-color;
         font-size: 16px;
         margin-top: 0;
@@ -208,11 +218,10 @@ p {
         top: 0;
         color: $text-grey;
     }
-    .company {
+    .company, .university {
         margin-bottom: 10px;
         color: $text-grey;
-    }
-    
+    } 
     .project-title {
         font-size: 16px;
         font-weight: 400;
@@ -227,9 +236,7 @@ p {
             margin-bottom: 15px;
         }
     }
-    
 }
-
 
 .skillset {
     .item {
@@ -239,35 +246,32 @@ p {
     .level-title {
         font-size: 14px;
         margin-top: 0;
-        margin-bottom: 12px;
+        display: inline-block;
+        width: 30%;
+        margin-bottom: 0;
     }
-    
-    
     .level-bar {
         height: 12px;
         background: $smoky-white;
-        @include border-radius(2px);
+        display: inline-block;
+        width: 70%;
+        position: relative;
+        top: 1px;
     }
-    
-    .theme-progress-bar {
-	    background: lighten($theme-color, 10%);
+    .level-bar-inner {
+        height: 12px;
+        background: lighten($theme-color, 15%);
     }
 }
 
-
-
-
 .footer {
     padding: 30px;
-    padding-top: 60px;
     .copyright {
         line-height: 1.6;
         color: $text-color-secondary;
         font-size: 13px;       
     }  
-    
     .fa-heart {
         color: $heart;
     }
-    
 }

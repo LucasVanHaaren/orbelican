@@ -1,21 +1,29 @@
 <div class="sidebar-wrapper">
-    <div class="profile-wrapper">
+    <div class="profile-container">
         {% if PROFILE_PICTURE %}
-        <img class="profile-img" src="{{ SITEURL }}/images/{{ PROFILE_PICTURE }}" />
+        <img class="profile" src="{{ SITEURL }}/images/{{ PROFILE_PICTURE }}" />
         {% else %}
-        <img class="profile-img" src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/images/profile.png" />
+        <img class="profile" src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/images/profile.png" />
         {% endif %}
 
-        {% if PROFILE_NAME %}
-        <h1 class="name">{{ PROFILE_NAME }}</h1>
+        {% if PROFILE_FIRSTNAME and PROFILE_LASTNAME %}
+        <h1 class="name">{{ PROFILE_FIRSTNAME }}</h1>
+        <h1 class="name">{{ PROFILE_LASTNAME }}</h1>
         {% else %}
-        <h1 class="name">Alan Doe</h1>
+        <h1 class="name">Alan</h1>
+        <h1 class="name">Doe</h1>
         {% endif %}
 
         {% if PROFILE_TAGLINE %}
         <h3 class="tagline">{{ PROFILE_TAGLINE }}</h3>
         {% else %}
         <h3 class="tagline">Web Developer</h3>
+        {% endif %}
+
+        {% if PROFILE_AGE %}
+        <h3 class="age">{{ PROFILE_AGE }}</h3>
+        {% else %}
+        <h3 class="age">24 yo</h3>
         {% endif %}
     </div>
     {% include 'includes/infos.html' %}
