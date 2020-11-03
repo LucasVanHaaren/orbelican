@@ -6,101 +6,145 @@ A simple port of **orbit-theme** for **Pelican** to build your online resume
 
 ## Getting started
 
+### Configuration
+
+To avoid problems make sure this configuration is written in `pelicanconf.py`
+
+```python
+THEME = "orbelican"
+AUTHOR = ""
+SITENAME = ""
+SITEURL = ""
+PATH = ""
+TIMEZONE = ''
+DEFAULT_LANG = ''
+ARTICLE_EXCLUDES = [".env"] # exclude your venv
+```
+
+### With pelican-data-files
+
+This theme support [**pelican-data-files**](https://github.com/LucasVanHaaren/pelican-data-files) plugin.
+
+You can fill in your information by installing this plugin and copying the data folder to your project root directory (next to content for example), then fill in your informations.
+
+### Without plugin
+
+If you don't use **pelican-data-files**, you have to set data as Pelican settings.
+Paste and fill in these following data in your `pelicanconf.py`.
+
+```python
+DATA_CONFIG = {
+    "theme": {
+        "color": "",
+        "browser_color": "",
+        "show_footer": True
+    },
+    "site": {
+        "favicon": "",
+        "profile": "",
+        "description": "",
+        "robots": "",
+        "google_analytics": ""
+    }
+}
+
+DATA_PROFILE = {
+    "info": {
+        "firstname": "",
+        "lastname": "",
+        "tagline": "",
+        "age": "",
+        "email": "",
+        "phone": "",
+        "address": "",
+        "driving_license": ""
+    },
+    "contact": {
+        "telegram": "",
+        "website": "",
+        "linkedin": "",
+        "github": "",
+        "gitlab": "",
+        "bitbucket": "",
+        "twitter": "",
+        "stackoverflow": "",
+        "codewars": "",
+        "goodreads": ""
+    },
+    "languages": {
+        "title": "",
+        "list": [
+            {
+                "idiom": "",
+                "level": ""
+            }
+        ]
+    }
+}
+
+DATA_RESUME = {
+    "summary": {
+        "title": "",
+        "content": ""
+    },
+    "education": {
+        "title": "",
+        "list": [
+            {
+                "degree": "",
+                "date": "",
+                "university": "",
+                "details": ""
+            }
+        ]
+    },
+    "experiences": {
+        "title": "",
+        "list": [
+            {
+                "title": "",
+                "company": "",
+                "date": "",
+                "details": ""
+            }
+        ]
+    },
+    "projects": {
+        "title": "",
+        "content": "",
+        "list": [
+            {
+                "title": "",
+                "tagline": "",
+                "link": ""
+            }
+        ]
+    },
+    "skills": {
+        "title": "",
+        "list": [
+            {
+                "name": "",
+                "level": ""
+            }
+        ]
+    }
+}
+```
+
+### Customization
+
+#### Add custom profile picture and favicon
+
+Copy your best profile picture in your site project in `images` folder and set `PROFILE_PICTURE = '<FILENAME>'`. Do the same for customize your favicon.
+
+## Contributing
+
 To build css files from sass, run:
 
 ```bash
 python setup.py build_sass
 ```
-
-```python
-THEME = 'orbelican'
-THEME_COLOR = 'blue' # ['blue','green','red','purple','grey']
-
-# SITE CONFIG
-SITENAME = ''
-SITEURL = ''
-SITEDESCRIPTION = ''
-SITEFAVICON = ''
-SITEROBOTS = ''
-
-# PROFILE
-PROFILE_FIRSTNAME = ''
-PROFILE_LASTNAME = ''
-PROFILE_AGE = ''
-PROFILE_PICTURE = ''
-PROFILE_SUMMARY_LABEL = ''
-PROFILE_SUMMARY = ''
-PROFILE_EDUCATIONS_LABEL = ''
-PROFILE_EDUCATIONS = [
-    {
-        'degree': '',
-        'time': '',
-        'university': '',
-        'details': '',
-    }
-]
-PROFILE_EXPERIENCES_LABEL = ''
-PROFILE_EXPERIENCES = [
-    {
-        'title': '',
-        'time': '',
-        'company': '',
-        'details': ''
-    }
-]
-PROFILE_PROJECTS_LABEL = ''
-PROFILE_PROJECTS_INTRO = ''
-PROFILE_PROJECTS = [
-    {
-        'title': '',
-        'link': '',
-        'tagline': ''
-    }
-]
-PROFILE_SKILLS_LABEL = ''
-PROFILE_SKILLS = [
-    {
-        'name': '',
-        'level': '',
-    }
-]
-
-# SIDEBAR
-SIDEBAR_EMAIL = ''
-SIDEBAR_PHONE = ''
-SIDEBAR_TELEGRAM = ''
-SIDEBAR_WEBSITE = ''
-SIDEBAR_LINKEDIN = ''
-SIDEBAR_GITHUB = ''
-SIDEBAR_GITLAB = ''
-SIDEBAR_BITBUCKET = ''
-SIDEBAR_TWITTER = ''
-SIDEBAR_STACKOVERFLOW = ''
-SIDEBAR_CODEWARS = ''
-SIDEBAR_GOODREADS = ''
-SIDEBAR_DRIVINGLICENSE = ''
-SIDEBAR_ADDRESS = ''
-
-SIDEBAR_LANGUAGES_LABEL = ''
-SIDEBAR_LANGUAGES = [
-    {
-        'idiom': '',
-        'level': ''
-    }
-]
-
-
-# EXTRA FEATURES
-BROWSER_COLOR = ''
-GOOGLE_ANALYTICS = ''
-SHOW_FOOTER = True
-```
-
-### Customization
-
-#### Add a profile picture
-
-Copy your best profile picture in your site project in `images` folder and set `PROFILE_PICTURE = '<FILENAME>'`. Do the same for customize your favicon.
 
 ## License
 
