@@ -1,23 +1,23 @@
 <div class="contact-container container-block">
     <ul class="list-unstyled contact-list">
-        {% if SIDEBAR_EMAIL %}
+        {% if DATA_PROFILE['info']['email'] %}
         <li class="email"><i class="fas fa-envelope"></i>
-            <a href="mailto:{{ SIDEBAR_EMAIL }}">{{ SIDEBAR_EMAIL }}</a>
+            <a href="mailto:{{ DATA_PROFILE['info']['email'] }}">{{ DATA_PROFILE['info']['email'] }}</a>
         </li>
         {% endif %}
-        {% if SIDEBAR_PHONE %}
+        {% if DATA_PROFILE['info']['phone'] %}
         <li class="phone"><i class="fas fa-phone"></i>
-            <a href="tel:{{ SIDEBAR_PHONE }}">{{ SIDEBAR_PHONE }}</a>
+            <a href="tel:{{ DATA_PROFILE['info']['phone'] }}">{{ DATA_PROFILE['info']['phone'] }}</a>
         </li>
         {% endif %}
-        {% if SIDEBAR_ADDRESS %}
+        {% if DATA_PROFILE['info']['address'] %}
         <li class="address"><i class="fas fa-home"></i>
-            {{ SIDEBAR_ADDRESS }}
+            {{ DATA_PROFILE['info']['address'] }}
         </li>
         {% endif %}
-        {% if SIDEBAR_DRIVINGLICENSE %}
+        {% if DATA_PROFILE['info']['driving_license'] %}
         <li class="driving-license"><i class="fas fa-car"></i>
-            {{ SIDEBAR_DRIVINGLICENSE }}
+            {{ DATA_PROFILE['info']['driving_license'] }}
         </li>
         {% endif %}
         <hr>

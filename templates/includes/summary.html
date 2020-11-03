@@ -1,14 +1,14 @@
-{% if PROFILE_SUMMARY %}
+{% if DATA_RESUME['summary'] %}
 <section class="section summary-section">
     <h2 class="section-title">
         <span class="fa-stack fa-xs">
             <i class="fas fa-circle fa-stack-2x"></i>
             <i class="fas fa-user fa-stack-1x fa-inverse"></i>
         </span>
-        {{ PROFILE_SUMMARY_LABEL }}
+        {{ DATA_RESUME['summary']['title'] }}
     </h2>
     <div class="summary">
-        {{ PROFILE_SUMMARY }}
+        {{ DATA_RESUME['summary']['content'] }}
     </div>
 </section>
 {% endif %}

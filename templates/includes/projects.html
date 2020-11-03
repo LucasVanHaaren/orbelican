@@ -1,18 +1,18 @@
-{% if PROFILE_PROJECTS %}
+{% if DATA_RESUME['projects'] %}
 <section class="section projects-section">
     <h2 class="section-title">
         <span class="fa-stack fa-xs">
             <i class="fas fa-circle fa-stack-2x"></i>
             <i class="fas fa-archive fa-stack-1x fa-inverse"></i>
         </span>
-        {{ PROFILE_PROJECTS_LABEL }}
+        {{ DATA_RESUME['projects']['title'] }}
     </h2>
-    {% if PROFILE_PROJECTS_INTRO %}
+    {% if DATA_RESUME['projects']['content'] %}
     <div class="intro">
-        <p>{{ PROFILE_PROJECTS_INTRO }}</p>
+        <p>{{ DATA_RESUME['projects']['content'] }}</p>
     </div>
     {% endif %}
-    {% for project in PROFILE_PROJECTS %}
+    {% for project in DATA_RESUME['projects']['list'] %}
     <div class="item">
         <span class="project-title">
             {% if project['link'] %}

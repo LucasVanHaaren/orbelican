@@ -1,0 +1,33 @@
+{
+    "info": {
+        "firstname": "",
+        "lastname": "",
+        "tagline": "",
+        "age": "",
+        "email": "",
+        "phone": "",
+        "address": "",
+        "driving_license": ""
+    },
+    "contact": {
+        "telegram": "",
+        "website": "",
+        "linkedin": "",
+        "github": "",
+        "gitlab": "",
+        "bitbucket": "",
+        "twitter": "",
+        "stackoverflow": "",
+        "codewars": "",
+        "goodreads": ""
+    },
+    "languages": {
+        "title": "",
+        "list": [
+            {
+                "idiom": "",
+                "level": ""
+            }
+        ]
+    }
+}
