@@ -1,27 +1,27 @@
 <div class="sidebar-wrapper">
     <div class="profile-container">
-        {% if PROFILE_PICTURE %}
-        <img class="profile" src="{{ SITEURL }}/images/{{ PROFILE_PICTURE }}" />
+        {% if DATA_CONFIG['site']['profile'] %}
+        <img class="profile" src="{{ SITEURL }}/images/{{ DATA_CONFIG['site']['profile'] }}" />
         {% else %}
         <img class="profile" src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/images/profile.png" />
         {% endif %}
 
-        {% if PROFILE_FIRSTNAME and PROFILE_LASTNAME %}
-        <h1 class="name">{{ PROFILE_FIRSTNAME }}</h1>
-        <h1 class="name">{{ PROFILE_LASTNAME }}</h1>
+        {% if DATA_PROFILE['info']['firstname'] and DATA_PROFILE['info']['lastname'] %}
+        <h1 class="name">{{ DATA_PROFILE['info']['firstname'] }}</h1>
+        <h1 class="name">{{ DATA_PROFILE['info']['lastname'] }}</h1>
         {% else %}
         <h1 class="name">Alan</h1>
         <h1 class="name">Doe</h1>
         {% endif %}
 
-        {% if PROFILE_TAGLINE %}
-        <h3 class="tagline">{{ PROFILE_TAGLINE }}</h3>
+        {% if DATA_PROFILE['info']['tagline'] %}
+        <h3 class="tagline">{{ DATA_PROFILE['info']['tagline'] }}</h3>
         {% else %}
         <h3 class="tagline">Web Developer</h3>
         {% endif %}
 
-        {% if PROFILE_AGE %}
-        <h3 class="age">{{ PROFILE_AGE }}</h3>
+        {% if DATA_PROFILE['info']['age'] %}
+        <h3 class="age">{{ DATA_PROFILE['info']['age'] }}</h3>
         {% else %}
         <h3 class="age">24 yo</h3>
         {% endif %}

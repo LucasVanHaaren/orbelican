@@ -1,14 +1,14 @@
-{% if SIDEBAR_LANGUAGES %}
+{% if DATA_PROFILE['languages'] %}
 <div class="languages-container container-block">
     <h2 class="container-block-title">
-        {% if SIDEBAR_LANGUAGES_LABEL %}
-        {{ SIDEBAR_LANGUAGES_LABEL }}
+        {% if DATA_PROFILE['languages']['title'] %}
+        {{ DATA_PROFILE['languages']['title'] }}
         {% else %}
         Languages
         {% endif %}
     </h2>
     <ul class="list-unstyled interests-list">
-        {% for language in SIDEBAR_LANGUAGES %}
+        {% for language in DATA_PROFILE['languages']['list'] %}
         <li>
             {{ language['idiom'] }}
             {% if language['level'] %}
