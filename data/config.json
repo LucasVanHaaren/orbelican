@@ -1,0 +1,14 @@
+{
+    "theme": {
+        "color": "",
+        "browser_color": "",
+        "show_footer": true
+    },
+    "site": {
+        "favicon": "",
+        "profile": "",
+        "description": "",
+        "robots": "",
+        "google_analytics": ""
+    }
+}

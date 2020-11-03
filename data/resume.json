@@ -1,0 +1,47 @@
+{
+    "summary": {
+        "title": "",
+        "content": ""
+    },
+    "education": {
+        "title": "",
+        "list": [
+            {
+                "degree": "",
+                "date": "",
+                "university": "",
+                "details": ""
+            }
+        ]
+    },
+    "experiences": {
+        "title": "",
+        "list": [
+            {
+                "title": "",
+                "date": "",
+                "company": "",
+                "details": ""
+            }
+        ]
+    },
+    "projects": {
+        "title": "",
+        "list": [
+            {
+                "title": "",
+                "link": "",
+                "tagline": ""
+            }
+        ]
+    },
+    "skills": {
+        "title": "",
+        "list": [
+            {
+                "name": "",
+                "level": ""
+            }
+        ]
+    }
+}
