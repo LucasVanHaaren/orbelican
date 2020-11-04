@@ -1,0 +1,18 @@
+{% if DATA_RESUME['skills']['secondary'] %}
+<div class="interests-container container-block">
+    <h2 class="container-block-title">
+        {{ DATA_RESUME['skills']['secondary']['title'] }}
+    </h2>
+    <ul class="list-unstyled interests-list">
+        {% for skill in DATA_RESUME['skills']['secondary']['list'] %}
+        {% if skill['link'] %}
+        <li><a href="{{ skill['link'] }}" target="_blank">{{ skill['name'] }}</a><i class="fas fa-check-circle"></i>
+        </li>
+        {% else %}
+        <li>{{ skill['name'] }}</li>
+        {% endif %}
+        {% endfor %}
+    </ul>
+
+</div>
+{% endif %}
