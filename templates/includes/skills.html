@@ -1,14 +1,14 @@
-{% if DATA_RESUME['skills'] %}
+{% if DATA_RESUME['skills']['main'] %}
 <section class="skills-section section">
     <h2 class="section-title">
         <span class="fa-stack fa-xs">
             <i class="fas fa-circle fa-stack-2x"></i>
             <i class="fas fa-wrench fa-stack-1x fa-inverse"></i>
         </span>
-        {{ DATA_RESUME['skills']['title'] }}
+        {{ DATA_RESUME['skills']['main']['title'] }}
     </h2>
     <div class="skillset">
-        {% for skill in DATA_RESUME['skills']['list'] %}
+        {% for skill in DATA_RESUME['skills']['main']['list'] %}
         {% if skill['link'] %}
         <div class="item">
             <h3 class="level-title"><a href="{{ skill['link'] }}">{{ skill['name'] }}</a><i
