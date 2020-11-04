@@ -37,13 +37,24 @@
         ]
     },
     "skills": {
-        "title": "",
-        "list": [
-            {
-                "name": "",
-                "level": "",
-                "link": ""
-            }
-        ]
+        "main": {
+            "title": "",
+            "list": [
+                {
+                    "name": "",
+                    "level": "",
+                    "link": ""
+                }
+            ]
+        },
+        "secondary": {
+            "title": "",
+            "list": [
+                {
+                    "name": "",
+                    "link": ""
+                }
+            ]
+        }
     }
 }
