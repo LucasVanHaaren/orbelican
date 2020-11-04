@@ -9,6 +9,16 @@
     </h2>
     <div class="skillset">
         {% for skill in DATA_RESUME['skills']['list'] %}
+        {% if skill['link'] %}
+        <div class="item">
+            <h3 class="level-title"><a href="{{ skill['link'] }}">{{ skill['name'] }}</a><i
+                    class="fas fa-check-circle"></i></h3>
+            <div class="level-bar">
+                <div class="level-bar-inner" data-level="{{ skill.level }}">
+                </div>
+            </div>
+        </div>
+        {% else %}
         <div class="item">
             <h3 class="level-title">{{ skill['name'] }}</h3>
             <div class="level-bar">
@@ -16,6 +26,7 @@
                 </div>
             </div>
         </div>
+        {% endif %}
         {% endfor %}
     </div>
 </section>
