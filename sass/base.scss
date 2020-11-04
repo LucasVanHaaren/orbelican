@@ -244,6 +244,12 @@ p {
         overflow: hidden;
     }
     .level-title {
+        i {
+            margin-left: 0.5em;
+        }
+        a {
+            color: $text-color-secondary;
+        }
         font-size: 14px;
         margin-top: 0;
         display: inline-block;
