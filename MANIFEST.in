@@ -1,0 +1,2 @@
+graft pelican/themes/orbelican
+prune pelican/themes/orbelican/sass
