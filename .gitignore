@@ -2,3 +2,6 @@
 static/css/
 .env/
 .eggs/
+build/
+dist/
+*.egg-info
