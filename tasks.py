@@ -31,7 +31,7 @@ def sass(c, compress=False):
     sass_compile(dirname=(SASS_SRC, SASS_DEST), output_style=style)
 
 @task
-def clean(c, dist=False, build=False, css=False):
+def clean(c, dist=False, build=False, css=False, egg=False):
     """Clean build directories"""
     patterns = []
     if dist:
@@ -40,6 +40,9 @@ def clean(c, dist=False, build=False, css=False):
         patterns.append("build/")
     if css:
         patterns.append(SASS_DEST)
+    if egg:
+        patterns.append(".eggs")
+        patterns.append("*.egg-info")
 
     for p in patterns:
         c.run(f"rm -rf {p}")
