@@ -1,4 +1,9 @@
-# orbelican
+# orbelican 
+
+![pypi_badge](https://img.shields.io/pypi/v/orbelican?logo=pypi&logoColor=yellow&style=for-the-badge)
+![license_badge](https://img.shields.io/pypi/l/orbelican?style=for-the-badge)
+
+---
 
 A simple port of [**orbit-theme**](https://github.com/xriley/Orbit-Theme) for the [**Pelican**](https://github.com/getpelican/pelican) static site generator to build your online resume
 
