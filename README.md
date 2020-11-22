@@ -1,14 +1,12 @@
 # orbelican
 
-A simple port of **orbit-theme** for **Pelican** to build your online resume
-
->[**orbit-theme**](https://github.com/xriley/Orbit-Theme) is a free BootStrap resume template for developers
+A simple port of [**orbit-theme**](https://github.com/xriley/Orbit-Theme) for the [**Pelican**](https://github.com/getpelican/pelican) static site generator to build your online resume
 
 ## Getting started
 
 ### Configuration
 
-To avoid problems make sure this configuration is written in `pelicanconf.py`
+To avoid problems make sure these configuration variables are filled in `pelicanconf.py`
 
 ```python
 THEME = "orbelican"
@@ -140,10 +138,11 @@ Copy your best profile picture in your site project in `images` folder and set `
 
 ## Contributing
 
-To build css files from sass, run:
+To build css files from sass, make sur you have install dev dependencies and run the task `sass`:
 
 ```bash
-python setup.py build_sass
+pip install -e .[dev] # run this if you haven't already
+invoke sass
 ```
 
 ## License
