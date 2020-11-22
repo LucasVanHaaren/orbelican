@@ -10,13 +10,29 @@ To avoid problems make sure these configuration variables are filled in `pelican
 
 ```python
 THEME = "orbelican"
-AUTHOR = ""
-SITENAME = ""
-SITEURL = ""
-PATH = ""
+
+AUTHOR = ''
+SITENAME = ''
+SITEURL = ''
 TIMEZONE = ''
 DEFAULT_LANG = ''
+
+PATH = "" # leave this variable empty, there is no content to look for (except data files)
 ARTICLE_EXCLUDES = [".env"] # exclude your venv
+
+FEED_ALL_ATOM = None
+CATEGORY_FEED_ATOM = None
+TRANSLATION_FEED_ATOM = None
+AUTHOR_FEED_ATOM = None
+AUTHOR_FEED_RSS = None
+
+# set all these variables on false, because we only want to generate index.html
+DEFAULT_PAGINATION = False
+LOAD_CONTENT_CACHE = False
+TAGS_SAVE_AS = False
+AUTHORS_SAVE_AS = False
+CATEGORIES_SAVE_AS = False
+ARCHIVES_SAVE_AS = False
 ```
 
 ### With pelican-data-files
