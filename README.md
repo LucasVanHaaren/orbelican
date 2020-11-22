@@ -43,7 +43,7 @@ This theme support [**pelican-data-files**](https://github.com/LucasVanHaaren/pe
 
 > This plugin loads all the data files found in the project's data/ directory, and makes them accessible [...]
 
-First, fetch theme's sample data with the following command:
+First, fetch sample data from the theme with the following command:
 
 ```bash
 pelican-data-files --fetch orbelican
