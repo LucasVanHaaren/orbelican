@@ -1,0 +1,3 @@
+graft pelican/themes/orbelican
+prune pelican/themes/orbelican/__pycache__
+prune pelican/themes/orbelican/sass

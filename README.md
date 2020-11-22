@@ -1,150 +1,83 @@
 # orbelican
 
-A simple port of **orbit-theme** for **Pelican** to build your online resume
-
->[**orbit-theme**](https://github.com/xriley/Orbit-Theme) is a free BootStrap resume template for developers
+A simple port of [**orbit-theme**](https://github.com/xriley/Orbit-Theme) for the [**Pelican**](https://github.com/getpelican/pelican) static site generator to build your online resume
 
 ## Getting started
 
 ### Configuration
 
-To avoid problems make sure this configuration is written in `pelicanconf.py`
+To avoid problems make sure these configuration variables are filled in `pelicanconf.py`
 
 ```python
 THEME = "orbelican"
-AUTHOR = ""
-SITENAME = ""
-SITEURL = ""
-PATH = ""
+
+AUTHOR = ''
+SITENAME = ''
+SITEURL = ''
 TIMEZONE = ''
 DEFAULT_LANG = ''
+
+PATH = "" # leave this variable empty, there is no content to look for (except data files)
 ARTICLE_EXCLUDES = [".env"] # exclude your venv
-```
 
-### With pelican-data-files
+FEED_ALL_ATOM = None
+CATEGORY_FEED_ATOM = None
+TRANSLATION_FEED_ATOM = None
+AUTHOR_FEED_ATOM = None
+AUTHOR_FEED_RSS = None
 
-This theme support [**pelican-data-files**](https://github.com/LucasVanHaaren/pelican-data-files) plugin.
-
-You can fill in your information by installing this plugin and copying the data folder to your project root directory (next to content for example), then fill in your informations.
-
-### Without plugin
-
-If you don't use **pelican-data-files**, you have to set data as Pelican settings.
-Paste and fill in these following data in your `pelicanconf.py`.
-
-```python
-DATA_CONFIG = {
-    "theme": {
-        "color": "",
-        "browser_color": "",
-        "show_footer": True
-    },
-    "site": {
-        "favicon": "",
-        "profile": "",
-        "description": "",
-        "robots": "",
-        "google_analytics": ""
-    }
-}
-
-DATA_PROFILE = {
-    "info": {
-        "firstname": "",
-        "lastname": "",
-        "tagline": "",
-        "age": "",
-        "email": "",
-        "phone": "",
-        "address": "",
-        "driving_license": ""
-    },
-    "contact": {
-        "telegram": "",
-        "website": "",
-        "linkedin": "",
-        "github": "",
-        "gitlab": "",
-        "bitbucket": "",
-        "twitter": "",
-        "stackoverflow": "",
-        "codewars": "",
-        "goodreads": ""
-    },
-    "languages": {
-        "title": "",
-        "list": [
-            {
-                "idiom": "",
-                "level": ""
-            }
-        ]
-    }
-}
-
-DATA_RESUME = {
-    "summary": {
-        "title": "",
-        "content": ""
-    },
-    "education": {
-        "title": "",
-        "list": [
-            {
-                "degree": "",
-                "date": "",
-                "university": "",
-                "details": ""
-            }
-        ]
-    },
-    "experiences": {
-        "title": "",
-        "list": [
-            {
-                "title": "",
-                "company": "",
-                "date": "",
-                "details": ""
-            }
-        ]
-    },
-    "projects": {
-        "title": "",
-        "content": "",
-        "list": [
-            {
-                "title": "",
-                "tagline": "",
-                "link": ""
-            }
-        ]
-    },
-    "skills": {
-        "title": "",
-        "list": [
-            {
-                "name": "",
-                "level": ""
-            }
-        ]
-    }
-}
+# set all these variables on false, because we only want to generate index.html
+DEFAULT_PAGINATION = False
+LOAD_CONTENT_CACHE = False
+TAGS_SAVE_AS = False
+AUTHORS_SAVE_AS = False
+CATEGORIES_SAVE_AS = False
+ARCHIVES_SAVE_AS = False
 ```
 
 ### Customization
 
+#### Data
+
+This theme support [**pelican-data-files**](https://github.com/LucasVanHaaren/pelican-data-files) plugin.
+
+> This plugin loads all the data files found in the project's data/ directory, and makes them accessible [...]
+
+First, fetch sample data from the theme with the following command:
+
+```bash
+pelican-data-files --fetch orbelican
+```
+
+A `data/` folder must have been created, you can modify these files in order to personalize the site.
+
 #### Add custom profile picture and favicon
 
-Copy your best profile picture in your site project in `images` folder and set `PROFILE_PICTURE = '<FILENAME>'`. Do the same for customize your favicon.
+Copy your best profile picture in your site project in `images/` folder and edit the `config.json` to set proper filename to `profile` attribute. Do the same for customize your favicon.
+
+### Generate your website
+
+You can generate the site with the simple command:
+
+```bash
+pelican
+```
+
+**Note:** you can also easily serve the site by running the following command:
+
+```bash
+pelican -l
+```
 
 ## Contributing
 
-To build css files from sass, run:
+To build css files from sass, run the task `sass`:
 
 ```bash
-python setup.py build_sass
+invoke sass
 ```
+
+**Note:** make sure you have installed dev dependencies.
 
 ## License
 
